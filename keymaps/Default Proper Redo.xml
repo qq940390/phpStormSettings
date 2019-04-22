@@ -5,4 +5,9 @@
     <keyboard-shortcut first-keystroke="ctrl y" />
   </action>
   <action id="EditorDeleteLine" />
+  <action id="QuickJavaDoc">
+    <keyboard-shortcut first-keystroke="ctrl q" />
+    <mouse-shortcut keystroke="alt button2" />
+    <mouse-shortcut keystroke="control button3" />
+  </action>
 </keymap>
