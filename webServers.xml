@@ -1,9 +1,0 @@
-<application>
-  <component name="WebServers">
-    <option name="servers">
-      <webServer id="743d5b0c-30b6-43ab-9a3a-d9c0efc14071" name="yii2app" url="http://admin.yii2app.dev.wujinhai.cn">
-        <fileTransfer port="0" accessType="LOCAL" />
-      </webServer>
-    </option>
-  </component>
-</application>
