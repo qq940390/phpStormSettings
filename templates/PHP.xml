@@ -7,10 +7,10 @@
       <option name="PHP String Literal" value="false" />
     </context>
   </template>
-  <template name="apidocx" value="/**&#10; * $END$&#10; *&#10; * @apiName $APINAME$&#10; */" description="ApiDoc Documention" toReformat="true" toShortenFQNames="true">
-    <variable name="APINAME" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="apidocx" value="/**&#10; * @api {POST} $END$&#10; * @apiGroup 分组名称&#10; * @apiName 接口名称&#10; * @apiVersion 1.0.0&#10; *&#10; * @apiDescription 接口描述&#10; *&#10; * @apiHeader (group) {String} access-key=keyValue Users unique access-key.&#10; *&#10; * @apiHeaderExample {json} Header-Example:&#10; * {&#10; *     &quot;access-key&quot;: &quot;keyValue&quot;&#10; * }&#10; *&#10; * @apiParam (group) {String} $param1  参数说明1&#10; * @apiParam (group) {String} $param2  参数说明2&#10; * @apiParam {Object} address         address object.&#10; * @apiParam {String} [address[street]] Optional street and number.&#10; * @apiParam {String} [address[zip]]    Optional zip code.&#10; * @apiParam {String} address.city   city.&#10; *&#10; * @apiParamExample {json} Request-Example:&#10; * {&#10; *     &quot;id&quot;: 4711&#10; * }&#10; *&#10; * @apiSuccess (group) {Number} code    状态码，0：请求成功&#10; * @apiSuccess (group) {String} message   提示信息&#10; * @apiSuccess {Object}  data       data object.&#10; * @apiSuccess {Number}  data.age   age.&#10; * @apiSuccess {String}  data.image image.&#10; *&#10; * @apiSuccessExample {json} Success-Response:&#10; * {&#10; *     &quot;code&quot;:0,&#10; *     &quot;data&quot;:[&#10; *         age: 30,&#10; *         image: &quot;http://***&quot;&#10; *     ]&#10; * }&#10; *&#10; * @apiError (group) {string} code 错误码&#10; *&#10; * @apiErrorExample {json} Error-Response:&#10; * {&#10; *     &quot;code&quot;: 5001,&#10; *     &quot;message&quot;: &quot;接口异常&quot;&#10; * }&#10; *&#10; */" description="ApiDoc Comment" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="PHP Class Member" value="true" />
+      <option name="PHP Comment" value="true" />
     </context>
   </template>
 </templateSet>
