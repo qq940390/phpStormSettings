@@ -1,0 +1,6 @@
+<application>
+  <component name="phpfmtSettings">
+    <option name="spaceIndentation" value="true" />
+    <option name="spaceIndentationSize" value="4" />
+  </component>
+</application>
