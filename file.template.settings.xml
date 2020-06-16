@@ -1,7 +1,7 @@
 <application>
   <component name="ExportableFileTemplateSettings">
     <default_templates>
-      <template name="Yii2 Module File.php" reformat="true" live-template-enabled="true" />
+      <template name="Yii2 PHP View File.php" reformat="true" live-template-enabled="true" enabled="true" />
     </default_templates>
     <internal_templates>
       <template name="PHP File.php" reformat="true" live-template-enabled="true" enabled="true" />
