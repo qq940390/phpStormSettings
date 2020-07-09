@@ -19,4 +19,10 @@
       <option name="PHP Comment" value="true" />
     </context>
   </template>
+  <template name="valid_attr_func" value="/**&#10; * 验证&#10; *&#10; * @param string $attribute&#10; * @param array $params&#10; */&#10;public function valid$END$($attribute, $params)&#10;{&#10;    if(empty($this-&gt;$attribute)) {&#10;        $this-&gt;addError($attribute, '不能为空');&#10;    }&#10;}" description="模型中用于自定义验证的方法" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
