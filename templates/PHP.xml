@@ -25,7 +25,7 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="csrfreturn" value="//id无效时，表示启用防重复提交功能，并返回 csrf 值&#10;return $this-&gt;success('成功', ['csrf_value' =&gt; $this-&gt;getCsrfKey('add')]);" description="获取CSRF Value" toReformat="true" toShortenFQNames="true">
+  <template name="rscreturn" value="//id无效时，表示启用防重复提交功能，并返回 _rsc_value 值&#10;return $this-&gt;success('成功', ['_rsc_value' =&gt; $this-&gt;repeatSubmitCheckInit('add')]);" description="防止重复提交初始化" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP Class Member" value="true" />
       <option name="PHP Statement" value="true" />
