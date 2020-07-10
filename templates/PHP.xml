@@ -27,13 +27,17 @@
   </template>
   <template name="rscreturn" value="//id无效时，表示启用防重复提交功能，并返回 _rsc_value 值&#10;return $this-&gt;success('成功', ['_rsc_value' =&gt; $this-&gt;repeatSubmitCheckInit('add')]);" description="防止重复提交初始化" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP Class Member" value="true" />
       <option name="PHP Statement" value="true" />
     </context>
   </template>
   <template name="modelpagecode" value="$pager = new Pagination([&#10;    'totalCount' =&gt; $total,&#10;    'defaultPageSize' =&gt; 10,&#10;    'pageParam' =&gt; 'page',&#10;    'pageSizeParam' =&gt; 'size',&#10;]);" description="数据列表分页实例代码" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="modelfilter" value="//允许检索的字段&#10;$filterAccess = [&#10;    'username' =&gt; 'like',&#10;    'realname' =&gt; 'like',&#10;    'nickname' =&gt; 'like',&#10;];&#10;$model = G::doModelFilter($model, $filterAccess);" description="Model搜索过滤" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Statement" value="true" />
     </context>
   </template>
 </templateSet>
