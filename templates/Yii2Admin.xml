@@ -65,4 +65,14 @@
       <option name="PHP String Literal" value="false" />
     </context>
   </template>
+  <template name="ip_behavior" value="[&#10;    'class' =&gt; AttributeBehavior::class,&#10;    'attributes' =&gt; [&#10;        ActiveRecord::EVENT_AFTER_FIND =&gt; 'last_ip',&#10;    ],&#10;    'value' =&gt; function($event) {&#10;        return $this-&gt;last_ip ? inet_ntop($this-&gt;last_ip) : '';&#10;    },&#10;]," description="IP的Behavior处理" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+      <option name="PHP Class Member" value="false" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP Interface Member" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="PHP Trait Member" value="false" />
+    </context>
+  </template>
 </templateSet>
