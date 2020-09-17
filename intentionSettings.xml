@@ -1,0 +1,7 @@
+<application>
+  <component name="IntentionManagerSettings">
+    <ignoreAction name="PHP/Convert string interpolation to concatenation" />
+    <ignoreAction name="PHP/Convert string literal to HEREDOC/NOWDOC" />
+    <ignoreAction name="PHP/Convert string interpolation to sprintf call" />
+  </component>
+</application>
