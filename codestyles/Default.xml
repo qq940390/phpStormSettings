@@ -27,7 +27,7 @@
         </group>
         <group>
           <type>OVERRIDDEN_METHODS</type>
-          <order>KEEP</order>
+          <order>BY_NAME</order>
         </group>
       </groups>
       <rules>
@@ -42,10 +42,7 @@
         <section>
           <rule>
             <match>
-              <AND>
-                <FIELD>true</FIELD>
-                <modifiers />
-              </AND>
+              <FIELD>true</FIELD>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -55,15 +52,13 @@
             <match>
               <CONSTRUCTOR>true</CONSTRUCTOR>
             </match>
+            <order>BY_NAME</order>
           </rule>
         </section>
         <section>
           <rule>
             <match>
-              <AND>
-                <METHOD>true</METHOD>
-                <modifiers />
-              </AND>
+              <METHOD>true</METHOD>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -73,15 +68,13 @@
             <match>
               <TRAIT>true</TRAIT>
             </match>
+            <order>BY_NAME</order>
           </rule>
         </section>
         <section>
           <rule>
             <match>
-              <AND>
-                <INTERFACE>true</INTERFACE>
-                <modifiers />
-              </AND>
+              <INTERFACE>true</INTERFACE>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -89,7 +82,10 @@
         <section>
           <rule>
             <match>
-              <CLASS>true</CLASS>
+              <AND>
+                <CLASS>true</CLASS>
+                <modifiers />
+              </AND>
             </match>
             <order>BY_NAME</order>
           </rule>
