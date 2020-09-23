@@ -6,6 +6,7 @@
   </JSCodeStyleSettings>
   <PHPCodeStyleSettings>
     <option name="PHPDOC_BLANK_LINE_BEFORE_TAGS" value="true" />
+    <option name="FIELDS_DEFAULT_VISIBILITY" value="public" />
   </PHPCodeStyleSettings>
   <codeStyleSettings language="JSON">
     <indentOptions>
@@ -116,6 +117,20 @@
           </rules>
         </token>
       </tokens>
+      <groups>
+        <group>
+          <type>GETTERS_AND_SETTERS</type>
+          <order>KEEP</order>
+        </group>
+        <group>
+          <type>OVERRIDDEN_METHODS</type>
+          <order>BY_NAME</order>
+        </group>
+        <group>
+          <type>DEPENDENT_METHODS</type>
+          <order>DEPTH_FIRST</order>
+        </group>
+      </groups>
       <rules>
         <section>
           <rule>
@@ -207,6 +222,7 @@
               <AND>
                 <METHOD>true</METHOD>
                 <PUBLIC>true</PUBLIC>
+                <visibility />
               </AND>
             </match>
           </rule>
@@ -217,6 +233,7 @@
               <AND>
                 <METHOD>true</METHOD>
                 <PROTECTED>true</PROTECTED>
+                <visibility />
               </AND>
             </match>
           </rule>
@@ -227,6 +244,7 @@
               <AND>
                 <METHOD>true</METHOD>
                 <PRIVATE>true</PRIVATE>
+                <visibility />
               </AND>
             </match>
           </rule>
@@ -238,6 +256,7 @@
                 <METHOD>true</METHOD>
                 <PUBLIC>true</PUBLIC>
                 <STATIC>true</STATIC>
+                <visibility />
               </AND>
             </match>
           </rule>
@@ -249,6 +268,7 @@
                 <METHOD>true</METHOD>
                 <PROTECTED>true</PROTECTED>
                 <STATIC>true</STATIC>
+                <visibility />
               </AND>
             </match>
           </rule>
@@ -260,6 +280,7 @@
                 <METHOD>true</METHOD>
                 <PRIVATE>true</PRIVATE>
                 <STATIC>true</STATIC>
+                <visibility />
               </AND>
             </match>
           </rule>
@@ -281,7 +302,10 @@
         <section>
           <rule>
             <match>
-              <CLASS>true</CLASS>
+              <AND>
+                <CLASS>true</CLASS>
+                <visibility />
+              </AND>
             </match>
           </rule>
         </section>
