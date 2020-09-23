@@ -16,20 +16,106 @@
   <codeStyleSettings language="PHP">
     <option name="ALIGN_MULTILINE_ARRAY_INITIALIZER_EXPRESSION" value="true" />
     <arrangement>
-      <groups>
-        <group>
-          <type>GETTERS_AND_SETTERS</type>
-          <order>KEEP</order>
-        </group>
-        <group>
-          <type>DEPENDENT_METHODS</type>
-          <order>DEPTH_FIRST</order>
-        </group>
-        <group>
-          <type>OVERRIDDEN_METHODS</type>
-          <order>BY_NAME</order>
-        </group>
-      </groups>
+      <tokens>
+        <token id="visibility" name="visibility">
+          <rules>
+            <rule>
+              <match>
+                <PUBLIC>true</PUBLIC>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PROTECTED>true</PROTECTED>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PRIVATE>true</PRIVATE>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PUBLIC>true</PUBLIC>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PROTECTED>true</PROTECTED>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PRIVATE>true</PRIVATE>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </rules>
+        </token>
+        <token id="modifiers" name="modifiers">
+          <rules>
+            <rule>
+              <match>
+                <PUBLIC>true</PUBLIC>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PROTECTED>true</PROTECTED>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PRIVATE>true</PRIVATE>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PUBLIC>true</PUBLIC>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PROTECTED>true</PROTECTED>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PRIVATE>true</PRIVATE>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </rules>
+        </token>
+      </tokens>
       <rules>
         <section>
           <rule>
@@ -42,7 +128,68 @@
         <section>
           <rule>
             <match>
-              <FIELD>true</FIELD>
+              <AND>
+                <FIELD>true</FIELD>
+                <PUBLIC>true</PUBLIC>
+              </AND>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD>true</FIELD>
+                <PROTECTED>true</PROTECTED>
+              </AND>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD>true</FIELD>
+                <PRIVATE>true</PRIVATE>
+              </AND>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD>true</FIELD>
+                <PUBLIC>true</PUBLIC>
+                <STATIC>true</STATIC>
+              </AND>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD>true</FIELD>
+                <PROTECTED>true</PROTECTED>
+                <STATIC>true</STATIC>
+              </AND>
+            </match>
+            <order>BY_NAME</order>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <FIELD>true</FIELD>
+                <PRIVATE>true</PRIVATE>
+                <STATIC>true</STATIC>
+              </AND>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -52,15 +199,69 @@
             <match>
               <CONSTRUCTOR>true</CONSTRUCTOR>
             </match>
-            <order>BY_NAME</order>
           </rule>
         </section>
         <section>
           <rule>
             <match>
-              <METHOD>true</METHOD>
+              <AND>
+                <METHOD>true</METHOD>
+                <PUBLIC>true</PUBLIC>
+              </AND>
             </match>
-            <order>BY_NAME</order>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD>true</METHOD>
+                <PROTECTED>true</PROTECTED>
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD>true</METHOD>
+                <PRIVATE>true</PRIVATE>
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD>true</METHOD>
+                <PUBLIC>true</PUBLIC>
+                <STATIC>true</STATIC>
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD>true</METHOD>
+                <PROTECTED>true</PROTECTED>
+                <STATIC>true</STATIC>
+              </AND>
+            </match>
+          </rule>
+        </section>
+        <section>
+          <rule>
+            <match>
+              <AND>
+                <METHOD>true</METHOD>
+                <PRIVATE>true</PRIVATE>
+                <STATIC>true</STATIC>
+              </AND>
+            </match>
           </rule>
         </section>
         <section>
@@ -68,7 +269,6 @@
             <match>
               <TRAIT>true</TRAIT>
             </match>
-            <order>BY_NAME</order>
           </rule>
         </section>
         <section>
@@ -76,18 +276,13 @@
             <match>
               <INTERFACE>true</INTERFACE>
             </match>
-            <order>BY_NAME</order>
           </rule>
         </section>
         <section>
           <rule>
             <match>
-              <AND>
-                <CLASS>true</CLASS>
-                <modifiers />
-              </AND>
+              <CLASS>true</CLASS>
             </match>
-            <order>BY_NAME</order>
           </rule>
         </section>
       </rules>
