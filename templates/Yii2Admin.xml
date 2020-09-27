@@ -70,4 +70,19 @@
       <option name="PHP Trait Member" value="false" />
     </context>
   </template>
+  <template name="service_add" value="/**&#10; * 添加数据&#10; *&#10; * @param array $data&#10; * @param array $errors&#10; * @return $END$|bool&#10; */&#10;public static function add($data, &amp;$errors = []) {&#10;    $pk = self::primaryKey()[0];&#10;    $data = JSecurity::safeValue($data, true);&#10;    $model = new self;&#10;    unset($data[$pk]);&#10;    $model-&gt;attributes = $data;&#10;    if($model-&gt;save()) {&#10;        return $model;&#10;    } else {&#10;        $errors = current($model-&gt;firstErrors);&#10;        return false;&#10;    }&#10;}" description="Service类Add" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="service_edit" value="/**&#10; * 修改数据&#10; *&#10; * @param integer $id&#10; * @param array $data&#10; * @param array $errors&#10; * @return $END$|bool&#10; */&#10;public static function edit($id, $data, &amp;$errors = []) {&#10;    $data = JSecurity::safeValue($data, true);&#10;    $model = self::findOne(JParse::uint($id));&#10;    if(!$model) return false;&#10;    $model-&gt;attributes = $data;&#10;    if($model-&gt;save()) {&#10;        return $model;&#10;    } else {&#10;        $errors = current($model-&gt;firstErrors);&#10;        return false;&#10;    }&#10;}" description="Service类Edit" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="service_remove" value="/**&#10; * 删除&#10; *&#10; * @param integer $id 菜单ID&#10; * @return boolean 返回是否删除成功&#10; * @throws Throwable&#10; * @throws StaleObjectException&#10; */&#10;public static function remove($id) {&#10;    $id = JParse::uint($id);&#10;    $model = self::findOne($id);&#10;    if($return = $model-&gt;delete()) {&#10;        //...&#10;        return $return;&#10;    }&#10;    return false;&#10;}" description="Service类Remove" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
 </templateSet>
