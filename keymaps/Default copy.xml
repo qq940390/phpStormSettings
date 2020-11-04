@@ -2,7 +2,7 @@
   <action id="FindPrevious">
     <keyboard-shortcut first-keystroke="shift f3" />
   </action>
-  <action id="Macro.Save Auto Format">
+  <action id="Macro.FormatSave">
     <keyboard-shortcut first-keystroke="alt s" />
   </action>
   <action id="QuickJavaDoc">
