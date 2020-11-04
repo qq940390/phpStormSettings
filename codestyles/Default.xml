@@ -13,18 +13,87 @@
   </PHPCodeStyleSettings>
   <codeStyleSettings language="PHP">
     <arrangement>
+      <tokens>
+        <token id="visibility" name="visibility">
+          <rules>
+            <rule>
+              <match>
+                <PUBLIC>true</PUBLIC>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PROTECTED>true</PROTECTED>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PRIVATE>true</PRIVATE>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </rules>
+        </token>
+        <token id="modifiers" name="modifiers">
+          <rules>
+            <rule>
+              <match>
+                <AND>
+                  <PUBLIC>true</PUBLIC>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PROTECTED>true</PROTECTED>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <AND>
+                  <PRIVATE>true</PRIVATE>
+                  <STATIC>true</STATIC>
+                </AND>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PUBLIC>true</PUBLIC>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PROTECTED>true</PROTECTED>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+            <rule>
+              <match>
+                <PRIVATE>true</PRIVATE>
+              </match>
+              <order>BY_NAME</order>
+            </rule>
+          </rules>
+        </token>
+      </tokens>
       <groups>
         <group>
           <type>GETTERS_AND_SETTERS</type>
           <order>KEEP</order>
         </group>
         <group>
-          <type>DEPENDENT_METHODS</type>
-          <order>BREADTH_FIRST</order>
-        </group>
-        <group>
           <type>OVERRIDDEN_METHODS</type>
-          <order>BY_NAME</order>
+          <order>KEEP</order>
         </group>
       </groups>
       <rules>
@@ -39,10 +108,7 @@
         <section>
           <rule>
             <match>
-              <AND>
-                <FIELD>true</FIELD>
-                <modifiers />
-              </AND>
+              <FIELD>true</FIELD>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -57,10 +123,7 @@
         <section>
           <rule>
             <match>
-              <AND>
-                <METHOD>true</METHOD>
-                <modifiers />
-              </AND>
+              <METHOD>true</METHOD>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -68,10 +131,7 @@
         <section>
           <rule>
             <match>
-              <AND>
-                <TRAIT>true</TRAIT>
-                <modifiers />
-              </AND>
+              <TRAIT>true</TRAIT>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -79,10 +139,7 @@
         <section>
           <rule>
             <match>
-              <AND>
-                <INTERFACE>true</INTERFACE>
-                <modifiers />
-              </AND>
+              <INTERFACE>true</INTERFACE>
             </match>
             <order>BY_NAME</order>
           </rule>
@@ -90,10 +147,7 @@
         <section>
           <rule>
             <match>
-              <AND>
-                <CLASS>true</CLASS>
-                <modifiers />
-              </AND>
+              <CLASS>true</CLASS>
             </match>
             <order>BY_NAME</order>
           </rule>
