@@ -1,0 +1,7 @@
+<templateSet group="user">
+  <template name="&lt;abbreviation&gt;" value="/**&#10;     * 列表页&#10;     *&#10;     * @return array&#10;     */&#10;    public function actionIndex()&#10;    {&#10;        $model = CmsCategoryTypeService::find();&#10;&#10;        $model = G::modelAndFilter($model, $this-&gt;filterAccess);&#10;&#10;        $total = $model-&gt;count();&#10;        $pager = new Pagination([&#10;            'totalCount' =&gt; $total,&#10;            'defaultPageSize' =&gt; G::getPageSize(),&#10;            'pageParam' =&gt; 'page',&#10;            'pageSizeParam' =&gt; 'pageSize',&#10;        ]);&#10;&#10;        $model = G::modelSort($model, ['list_order' =&gt; SORT_ASC, 'ctid' =&gt; SORT_DESC], $this-&gt;sortAccess);&#10;        $model = $model-&gt;offset($pager-&gt;offset)-&gt;limit($pager-&gt;limit);&#10;&#10;        $model = $model-&gt;all();&#10;&#10;        $data = [];&#10;        foreach ($model as $item) {&#10;            $tmp = $item-&gt;attributes;&#10;            $data[] = $tmp;&#10;        }&#10;&#10;        return $this-&gt;success('OK', ['total' =&gt; $total, 'data' =&gt; $data, 'get' =&gt; G::get('filter')]);&#10;    }" description="列表页模板" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+</templateSet>
