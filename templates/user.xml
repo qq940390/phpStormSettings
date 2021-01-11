@@ -4,4 +4,85 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
+  <template name="apidocf" value="/**&#10; * @api {POST} /path$END$ 接口名称&#10; * @apiGroup groupname&#10; * @apiVersion 1.0.0&#10; *&#10; * @apiDescription 接口描述&#10; *&#10; * @apiHeader {String} Authorization Bearer Token 验证&#10; * @apiHeaderExample {json} Header例子：&#10; *  {&#10; *      &quot;Authorization&quot;: &quot;Bearer eyJ1aWQiOiI0MTUxNTExMjMyMjc3NSIsImV4cCI6IjIwMjEtMDEtMTQgMTE6MjI6MDUiLCJhcHBfaWRlbnRpdHkiOiJ1YyIsInNpZ24iOiJvRXJJamdJVVlTUHgzYmhNb3dITjREVzVDN3RhenFKRzRTUWtQVXpYejNHYklZeDZHQ2V2aDRwdWxVdC9vTE5vYjhRWk5xU1pNV0NhYTd2NGxDUU9nL0g3MGNCTzFwV1lLb2F1dTNLNXZEdVNxVDdGa2hvQ21MR2VjbUp6NWtlamU2azluMUp0Kzg4R3N0U0FZTkl1YThab1kwWnMvdG05SjhvU2RWTUI2NmdPeEtLeVVYbGpHUW1hUUJZak9HTGxqVEN5cVNRMkgwMSsxK3R3WUFJcXZGOTBzYlE4YzdackVFSnVOZ3VuVnJEcUUyQ051VWhRS3lWZ1ZJN09leGVEUExSWlB3ZjVjNys4UGd2dERiYTJ0LzFHb3Foay96RE81Mkd5TmtkK2tHb2ovbnRCL1V0Qm95dy9Qa0hHOVF3Tm9vNjkwQ1lKSTQxNDRrcHh1R0NodEE9PSJ9&quot;&#10; *  }&#10; *&#10; * @apiParam (Body form-data) {String} app_identity 应用英文标识&#10; * @apiParam (Body form-data) {String} param2 参数说明2&#10; *&#10; * @apiParamExample {String[]} 请求数据示例:&#10; * app_identity=&quot;tianyan&quot;;&#10; * param2=&quot;922&quot;; &#10; *&#10; * @apiSuccess (成功 [HTTP状态码 200]) {Number} code 返回码，200：请求成功&#10; * @apiSuccess (成功 [HTTP状态码 200]) {String} message 提示信息&#10; * @apiSuccess (成功 [HTTP状态码 200]) {Object} data 返回的数据对象&#10; * @apiSuccess (成功 [HTTP状态码 200]) {Number} data.age data.age&#10; * @apiSuccess (成功 [HTTP状态码 200]) {String} data.image data.image&#10; *&#10; * @apiSuccessExample {json} 成功后返回的数据示例:&#10; *  {&#10; *      &quot;code&quot;: 200,&#10; *      &quot;message&quot;: &quot;操作成功&quot;,&#10; *      &quot;data&quot;: {&#10; *          &quot;age&quot;: 30,&#10; *          &quot;image&quot;: &quot;http://***&quot;&#10; *      }&#10; *  }&#10; *&#10; * @apiError (失败 [HTTP状态码 200]) {Number} code 错误码&#10; * @apiError (失败 [HTTP状态码 200]) {String} message 错误消息&#10; *&#10; * @apiErrorExample {json} 失败后返回的数据示例:&#10; *  {&#10; *      &quot;code&quot;: 9999,&#10; *      &quot;message&quot;: &quot;错误&quot;,&#10; *      &quot;data&quot;: []&#10; *  }&#10; *&#10; */" description="ApiDoc 接口注释" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="apidocj" value="/**&#10; * @api {POST} /path$END$ 接口名称&#10; * @apiGroup groupname&#10; * @apiVersion 1.0.0&#10; *&#10; * @apiDescription 接口描述&#10; *&#10; * @apiHeader {String} Authorization Bearer Token 验证&#10; * @apiHeaderExample {json} Header例子：&#10; *  {&#10; *      &quot;Authorization&quot;: &quot;Bearer eyJ1aWQiOiI0MTUxNTExMjMyMjc3NSIsImV4cCI6IjIwMjEtMDEtMTQgMTE6MjI6MDUiLCJhcHBfaWRlbnRpdHkiOiJ1YyIsInNpZ24iOiJvRXJJamdJVVlTUHgzYmhNb3dITjREVzVDN3RhenFKRzRTUWtQVXpYejNHYklZeDZHQ2V2aDRwdWxVdC9vTE5vYjhRWk5xU1pNV0NhYTd2NGxDUU9nL0g3MGNCTzFwV1lLb2F1dTNLNXZEdVNxVDdGa2hvQ21MR2VjbUp6NWtlamU2azluMUp0Kzg4R3N0U0FZTkl1YThab1kwWnMvdG05SjhvU2RWTUI2NmdPeEtLeVVYbGpHUW1hUUJZak9HTGxqVEN5cVNRMkgwMSsxK3R3WUFJcXZGOTBzYlE4YzdackVFSnVOZ3VuVnJEcUUyQ051VWhRS3lWZ1ZJN09leGVEUExSWlB3ZjVjNys4UGd2dERiYTJ0LzFHb3Foay96RE81Mkd5TmtkK2tHb2ovbnRCL1V0Qm95dy9Qa0hHOVF3Tm9vNjkwQ1lKSTQxNDRrcHh1R0NodEE9PSJ9&quot;&#10; *  }&#10; *&#10; * @apiParam (Body/json) {String} app_identity 应用英文标识&#10; * @apiParam (Body/json) {String} param 参数说明&#10; *&#10; * @apiParamExample {json} 请求数据示例:&#10; *  {&#10; *      &quot;app_identity&quot;: &quot;tianyan&quot;,&#10; *      &quot;param&quot;: &quot;value&quot;&#10; *  }&#10; *&#10; * @apiSuccess (成功 [HTTP状态码 200]) {Number} code 返回码，200：请求成功&#10; * @apiSuccess (成功 [HTTP状态码 200]) {String} message 提示信息&#10; * @apiSuccess (成功 [HTTP状态码 200]) {Object} data 返回的数据对象&#10; * @apiSuccess (成功 [HTTP状态码 200]) {Number} data.age data.age&#10; * @apiSuccess (成功 [HTTP状态码 200]) {String} data.image data.image&#10; *&#10; * @apiSuccessExample {json} 成功后返回的数据示例:&#10; *  {&#10; *      &quot;code&quot;: 200,&#10; *      &quot;message&quot;: &quot;操作成功&quot;,&#10; *      &quot;data&quot;: {&#10; *          &quot;age&quot;: 30,&#10; *          &quot;image&quot;: &quot;http://***&quot;&#10; *      }&#10; *  }&#10; *&#10; * @apiError (失败 [HTTP状态码 200]) {Number} code 错误码&#10; * @apiError (失败 [HTTP状态码 200]) {String} message 错误消息&#10; *&#10; * @apiErrorExample {json} 失败后返回的数据示例:&#10; *  {&#10; *      &quot;code&quot;: 9999,&#10; *      &quot;message&quot;: &quot;错误&quot;,&#10; *      &quot;data&quot;: []&#10; *  }&#10; *&#10; */" description="ApiDoc 接口注释" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="fd" value="/**&#10; * $END$&#10; *&#10; * @author wujinhai, 940390@qq.com&#10; * @website http://wujinhai.cn&#10; * @github https://github.com/qq940390&#10; */" description="PHP文件头部" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+      <option name="PHP Class Member" value="false" />
+      <option name="PHP Expression" value="false" />
+      <option name="PHP String Literal" value="false" />
+    </context>
+  </template>
+  <template name="funcadd" value="public function actionAdd()&#10;{&#10;    if(\Yii::$app-&gt;request-&gt;isGet) {&#10;        $this-&gt;repeatSubmitCheckInit();&#10;        return $this-&gt;success('成功');&#10;    }&#10;&#10;    //处理POST&#10;    $this-&gt;checkPostMethod();&#10;&#10;    $post = G::bodyData();&#10;    $model = new $END$;&#10;    $model-&gt;setAttributes($post);&#10;    $model-&gt;created_at = G::time();&#10;    $model-&gt;beforeSave($model-&gt;isNewRecord);&#10;    if (!$model-&gt;validate() || !$this-&gt;checkRepeatSubmit() || !$model-&gt;save()) {&#10;        return $this-&gt;error(Error::INVALID_DATA_FORMAT, current($model-&gt;firstErrors));&#10;    }&#10;&#10;    if(!$model-&gt;save()) {&#10;        return $this-&gt;error(Error::INSERT_FAILED, current($model-&gt;firstErrors));&#10;    }&#10;    &#10;    SystemLogService::addLog(SystemLogService::TYPE_INSERT, '添加内容', $post);&#10;&#10;    return $this-&gt;success('操作成功');&#10;}" description="添加内容默认方法" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="funcdelete" value="public function actionDelete()&#10;    {&#10;        $this-&gt;checkPostMethod();&#10;&#10;        $id = G::getUint('id');&#10;        if (!$id) {&#10;            return $this-&gt;error(Error::INVALID_ARGS, '参数错误');&#10;        }&#10;&#10;        $model = $END$::findOne($id);&#10;        if (!$model) {&#10;            return $this-&gt;error(Error::DATA_NOT_FOUND, '数据不存在');&#10;        }&#10;&#10;        if (!$model-&gt;delete()) {&#10;            return $this-&gt;error(Error::INVALID_DATA_FORMAT, current($model-&gt;firstErrors));&#10;        }&#10;        &#10;        SystemLogService::addLog(SystemLogService::TYPE_DELETE, '删除内容', ['id' =&gt; $id]);&#10;&#10;        return $this-&gt;success('操作成功');&#10;    }" description="删除内容默认方法" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="funcedit" value="public function actionEdit()&#10;{&#10;    $id = G::getUint('id');&#10;    if (!$id) {&#10;        return $this-&gt;error(Error::INVALID_ARGS, '无效的参数');&#10;    }&#10;&#10;    $model = $END$::find()&#10;        -&gt;where(['app_id' =&gt; $id])&#10;        -&gt;one();&#10;    if (!$model) {&#10;        return $this-&gt;error(Error::DATA_NOT_FOUND, '数据不存在');&#10;    }&#10;&#10;    if(\Yii::$app-&gt;request-&gt;isGet) {&#10;        $this-&gt;repeatSubmitCheckInit('edit' . $id);&#10;        $data = $model-&gt;attributes;&#10;&#10;        return $this-&gt;success('成功', $data);&#10;    }&#10;&#10;    //处理POST&#10;    $this-&gt;checkPostMethod();&#10;    $post = G::bodyData();&#10;    $model-&gt;setAttributes($post);&#10;    $model-&gt;beforeSave($model-&gt;isNewRecord);&#10;    if (!$model-&gt;validate() || !$this-&gt;checkRepeatSubmit('edit' . $id) || !$model-&gt;save()) {&#10;        return $this-&gt;error(Error::INVALID_DATA_FORMAT, current($model-&gt;firstErrors));&#10;    }&#10;    &#10;    SystemLogService::addLog(SystemLogService::TYPE_UPDATE, '更新内容', $post);&#10;&#10;    return $this-&gt;success('操作成功');&#10;}" description="修改内容默认方法" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="funcorder" value="public function actionUpdateListOrder()&#10;    {&#10;        $this-&gt;checkPostMethod();&#10;&#10;        $post = G::bodyData();&#10;        if (empty($post)) {&#10;            return $this-&gt;error(Error::INVALID_ARGS, '参数错误');&#10;        }&#10;&#10;        $count = 0;&#10;        foreach ($post as $item) {&#10;            if(!is_array($item)) continue;&#10;            $count += $END$::updateAll(['list_order' =&gt; intval($item['order'])], ['app_id' =&gt; intval($item['id'])]);&#10;        }&#10;        &#10;        SystemLogService::addLog(SystemLogService::TYPE_UPDATE, '更新排序', $post);&#10;&#10;        ApplicationListService::updateCache();&#10;&#10;        return $this-&gt;success($count . ' 项更新排序成功');" description="更新排序默认方法" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="ip_behavior" value="[&#10;    'class' =&gt; AttributeBehavior::class,&#10;    'attributes' =&gt; [&#10;        ActiveRecord::EVENT_AFTER_FIND =&gt; 'last_ip',&#10;    ],&#10;    'value' =&gt; function($event) {&#10;        return $this-&gt;last_ip ? inet_ntop($this-&gt;last_ip) : '';&#10;    },&#10;]," description="IP的Behavior处理" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+      <option name="PHP Class Member" value="false" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP Interface Member" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="PHP Trait Member" value="false" />
+    </context>
+  </template>
+  <template name="modelfilter" value="//允许检索的字段&#10;$filterAccess = [&#10;    'username' =&gt; 'like',&#10;    'realname' =&gt; 'like',&#10;    'nickname' =&gt; 'like',&#10;];&#10;$model = G::doModelFilter($model, $filterAccess);" description="Model搜索过滤" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="modelpagecode" value="$pager = new Pagination([&#10;    'totalCount' =&gt; $total,&#10;    'defaultPageSize' =&gt; 10,&#10;    'pageParam' =&gt; 'page',&#10;    'pageSizeParam' =&gt; 'size',&#10;]);" description="数据列表分页实例代码" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="service_add" value="/**&#10; * 添加数据&#10; *&#10; * @param array $data&#10; * @param string $error&#10; * @return $END$|bool&#10; */&#10;public static function add($data, &amp;$error = '') {&#10;    $pk = self::primaryKey()[0];&#10;    $data = JSecurity::safeValue($data, true);&#10;    $model = new self;&#10;    unset($data[$pk]);&#10;    $model-&gt;attributes = $data;&#10;    if($model-&gt;save()) {&#10;        return $model;&#10;    } else {&#10;        $error = current($model-&gt;firstErrors);&#10;        return false;&#10;    }&#10;}" description="Service类Add" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="service_edit" value="/**&#10; * 修改数据&#10; *&#10; * @param integer $id&#10; * @param array $data&#10; * @param string $error&#10; * @return $END$|bool&#10; */&#10;public static function edit($id, $data, &amp;$error = '') {&#10;    $data = JSecurity::safeValue($data, true);&#10;    $model = self::findOne(intval($id));&#10;    if(!$model) return false;&#10;    $model-&gt;attributes = $data;&#10;    if($model-&gt;save()) {&#10;        return $model;&#10;    } else {&#10;        $error = current($model-&gt;firstErrors);&#10;        return false;&#10;    }&#10;}" description="Service类Edit" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="service_remove" value="/**&#10; * 删除&#10; *&#10; * @param integer $id 菜单ID&#10; * @param string $error&#10; * @return boolean 返回是否删除成功&#10; * @throws Throwable&#10; * @throws StaleObjectException&#10; */&#10;public static function remove($id, &amp;$error = '') {&#10;    $id = intval($id);&#10;    $model = self::findOne($id);&#10;    if($return = $model-&gt;delete()) {&#10;        //...&#10;        return $return;&#10;    }&#10;    $error = current($model-&gt;firstErrors);&#10;    return false;&#10;}" description="Service类Remove" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="valid_attr_func" value="/**&#10; * 验证&#10; *&#10; * @param string $attribute&#10; * @param array $params&#10; */&#10;public function valid$END$($attribute, $params)&#10;{&#10;    if(empty($this-&gt;$attribute)) {&#10;        $this-&gt;addError($attribute, '不能为空');&#10;    }&#10;}" description="模型中用于自定义验证的方法" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Class Member" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
 </templateSet>
