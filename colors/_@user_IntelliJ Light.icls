@@ -3,7 +3,7 @@
     <property name="created">2021-04-06T09:13:00</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2020.3.1.0.0</property>
-    <property name="modified">2021-04-06T09:18:03</property>
+    <property name="modified">2021-04-07T15:56:33</property>
     <property name="originalScheme">IntelliJ Light</property>
   </metaInfo>
   <colors>
@@ -157,10 +157,21 @@
         <option name="FOREGROUND" value="37a6" />
       </value>
     </option>
+    <option name="DEPRECATED_ATTRIBUTES">
+      <value>
+        <option name="EFFECT_COLOR" value="13e8fb" />
+        <option name="EFFECT_TYPE" value="3" />
+      </value>
+    </option>
     <option name="DIFF_MODIFIED">
       <value>
         <option name="BACKGROUND" value="c2d8f2" />
         <option name="ERROR_STRIPE_COLOR" value="b6d2f2" />
+      </value>
+    </option>
+    <option name="DUPLICATE_FROM_SERVER">
+      <value>
+        <option name="BACKGROUND" value="ffede0" />
       </value>
     </option>
     <option name="FOLDED_TEXT_ATTRIBUTES">
@@ -175,6 +186,13 @@
         <option name="FOREGROUND" value="6dcc" />
         <option name="EFFECT_COLOR" value="6dcc" />
         <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="GENERIC_SERVER_ERROR_OR_WARNING">
+      <value>
+        <option name="EFFECT_COLOR" value="ff9e00" />
+        <option name="ERROR_STRIPE_COLOR" value="e69317" />
+        <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
     <option name="GHERKIN_PYSTRING">
@@ -275,6 +293,13 @@
         <option name="FOREGROUND" value="851691" />
       </value>
     </option>
+    <option name="INFO_ATTRIBUTES">
+      <value>
+        <option name="EFFECT_COLOR" value="13e8fb" />
+        <option name="ERROR_STRIPE_COLOR" value="d9cfad" />
+        <option name="EFFECT_TYPE" value="2" />
+      </value>
+    </option>
     <option name="INSTANCE_FIELD_ATTRIBUTES" baseAttributes="" />
     <option name="JS.GLOBAL_VARIABLE">
       <value>
@@ -352,6 +377,12 @@
     <option name="TYPE_PARAMETER_NAME_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="7e8a" />
+      </value>
+    </option>
+    <option name="TYPO">
+      <value>
+        <option name="EFFECT_COLOR" value="2ce303" />
+        <option name="EFFECT_TYPE" value="2" />
       </value>
     </option>
     <option name="WARNING_ATTRIBUTES">
